@@ -109,24 +109,15 @@ export default function Restaurants(props) {
   };
 
   return (
-
-
-
-    <ScrollView style={styles.viewBody}>
-
-      <UserLoggedInfo
-
-      />    
-      
-      
-
-      <ListRestaurants
-        restaurants={restaurants}
-        handleLoadMore={handleLoadMore}
-        isLoading={isLoading}
-      />
-
-
+    <>
+      <ScrollView style={styles.viewBody}>
+        <UserLoggedInfo/>
+        <ListRestaurants
+          restaurants={restaurants}
+          handleLoadMore={handleLoadMore}
+          isLoading={isLoading}
+        />
+      </ScrollView>
       {user && (
         <Icon
           reverse
@@ -137,7 +128,7 @@ export default function Restaurants(props) {
           onPress={() => navigation.navigate("add-restaurant")}
         />
       )}
-    </ScrollView  >
+    </>
   );
 }
 

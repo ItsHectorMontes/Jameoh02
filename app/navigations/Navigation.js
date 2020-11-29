@@ -9,6 +9,7 @@ import TopRestaurantsStack from "./TopRestaurantsStack";
 import SearchStack from "./SearchStack";
 import AccountStack from "./AccountStack";
 import PromotionsStack from "./PromotionsStack";
+import AddRestaurantStack from './AddRestaurantStack';
 //
 import { createStackNavigator } from '@react-navigation/stack';
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,7 +20,6 @@ import Login from '../screens/Account/Login';
 import LoginFacebook from '../components/Account/LoginFacebook';
 import Register from '../screens/Account/Register';
 import { View } from "react-native";
-import { render } from "react-dom";
 
 
 

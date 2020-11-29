@@ -1,10 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Restaurants from "../screens/Restaurants/Restaurants";
-import AddRestaurant from "../screens/Restaurants/AddRestaurant";
+import AddRestaurantStack from "../navigations/AddRestaurantStack";
 import Restaurant from "../screens/Restaurants/Restaurant";
 import AddReviewRestaurant from "../screens/Restaurants/AddReviewRestaurant";
 import Search from  "../screens/Search";
+import * as firebase from 'firebase/app';
 
 const Stack = createStackNavigator();
 
@@ -21,8 +22,8 @@ export default function ResaturantsStack() {
      
       <Stack.Screen
         name="add-restaurant"
-        component={AddRestaurant}
-        options={{ title: "Añadir nuevo restaurante" }}
+        component={AddRestaurantStack}
+        options={{ title: `Hola ${firebase.auth().currentUser.displayName}` }}
       />
       <Stack.Screen name="restaurant" component={Restaurant} />
       <Stack.Screen
