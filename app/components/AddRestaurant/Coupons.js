@@ -62,8 +62,10 @@ const Coupons = ({coupons, success}) => {
         <Text>Agregar cupón</Text>
       </TouchableOpacity>
       {
+        
         coupons.map((coupon) => (
           <View style={styles.coupon}>
+          <Icon type="material-community" name="close" size={12} />
             <Image 
               source={{uri: coupon.image}} 
               width={40} 
